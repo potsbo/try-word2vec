@@ -1,3 +1,9 @@
 #!/bin/sh
 
 git submodule update --init --recursive
+
+mkdir -p ./bin
+
+cd word2vec
+make
+mv word2vec compute-accuracy distance word-analogy word2phrase ../bin
